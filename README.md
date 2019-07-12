@@ -2,12 +2,16 @@
 Assignment code for course ECE 493 T25 at the University of Waterloo in Spring 2019.
 Code designed and created by Sriram Ganapathi Subramanian and Mark Crowley, 2019.
 
+**Due Date:** July 30 11:59pm submitted as PDF and code to LEARN dropbox.
+**Collaboration:** You can discuss solutions and help to work out the code. But each person *must do their own work*. All code and writing will be cross-checked against each other and against internet databases for cheating. 
+
+Updates to code which will be useful for all or bugs in the provided code will be updated on gitlab and announced.
 
 ## Domain Description - GridWorld
 The domain consists of a 10x10 grid of cells. The agent being controlled is represented as a red square. The goal is a yellow oval and you receive a reward of 1 for reaching it, this ends and resets the episode.
 Blue squares are **pits** which yield a penalty of -10 and end the episode. 
 Black squares are **walls** which cannot be passed through. If the agent tries to walk into a wall they will remain in their current position and receive a penalty of -.3.
-Their are three tasks defined in 'run_main.py' which can be commented out to try each. They include a combination of pillars, rooms, pits and obstacles. The aim is to learn a policy that maximizes expected reward and reaches the goal as quickly as possible.
+Their are three tasks defined in `run_main.py` which can be commented out to try each. They include a combination of pillars, rooms, pits and obstacles. The aim is to learn a policy that maximizes expected reward and reaches the goal as quickly as possible.
 
 
 ## Assignment Requirements
@@ -34,5 +38,5 @@ So make sure your code runs with the given unmodified `run_main` and `maze_end` 
 
 ### Code Suggestions
 - When the number of episodes ends a plot is displayed of the algorithm performance. If multiple algorithms are run at once then they will be all plotted together for comparison. You may modify the plotting code and add any other analysis you need, this is only a starting point.
-- there are a number of parameters defined in `run_main` that can be used to speed up the simulations. Once you have debugged an algorithm and see it is running you can alter the `sim_speed`, `*EveryNth` variables to alter the speed of each step and how often data is printed or updated visually to speed up training. 
+- there are a number of parameters defined in `run_main` that can be used to speed up the simulations. Once you have debugged an algorithm and see it is running you can alter the `sim_speed`, `\*EveryNth` variables to alter the speed of each step and how often data is printed or updated visually to speed up training. 
 - For the default algorithms we have implemnted on these domains it seems to take at least 1500 episodes to converge, so don't read too much into how it looks after a few hundred.
