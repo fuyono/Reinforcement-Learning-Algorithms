@@ -82,12 +82,12 @@ def update(env, RL, data, episodes=50):
     env.destroy()
 
 if __name__ == "__main__":
-    sim_speed = 0.1
+    sim_speed = 0.05
 
     #Example Short Fast for Debugging
     showRender=True
     episodes=30
-    renderEveryNth=10000
+    renderEveryNth=5
     printEveryNth=1
     do_plot_rewards=True
 
