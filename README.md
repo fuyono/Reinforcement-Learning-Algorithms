@@ -14,6 +14,9 @@ Blue squares are **pits** which yield a penalty of -10 and end the episode.
 Black squares are **walls** which cannot be passed through. If the agent tries to walk into a wall they will remain in their current position and receive a penalty of -.3.
 Their are three tasks defined in `run_main.py` which can be commented out to try each. They include a combination of pillars, rooms, pits and obstacles. The aim is to learn a policy that maximizes expected reward and reaches the goal as quickly as possible.
 
+![Task 1](task1.png)
+![Task 2](task2.png)
+![Task 3](task3.png)
 
 ## Assignment Requirements
 
@@ -49,3 +52,5 @@ So make sure your code runs with the given unmodified `run_main` and `maze_end` 
 - When the number of episodes ends a plot is displayed of the algorithm performance. If multiple algorithms are run at once then they will be all plotted together for comparison. You may modify the plotting code and add any other analysis you need, this is only a starting point.
 - there are a number of parameters defined in `run_main` that can be used to speed up the simulations. Once you have debugged an algorithm and see it is running you can alter the `sim_speed`, `\*EveryNth` variables to alter the speed of each step and how often data is printed or updated visually to speed up training. 
 - For the default algorithms we have implemnted on these domains it seems to take at least 1500 episodes to converge, so don't read too much into how it looks after a few hundred.
+![Plot](plot.png)
+![Plot zoomed](plotzoom.png)
