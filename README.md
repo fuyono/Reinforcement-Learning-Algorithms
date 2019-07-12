@@ -30,7 +30,10 @@ Suggestions to try:
     - n-step TD or TD(Lambda) with eligibility traces (harder)
     - Policy Gradients (harderer)
 - **(10%) bonus** Implement four algorithms in total (you can do more but we'll only look at four, you need to tell us which).
-- **(40%)** Report : Write a short report on the problem and the results of your three algorithms. This should include some plots as well as the mathematical formulations of each of your solutions. The report should be submited on LEARN as a pdf. 
+- **(40%)** Report : Write a short report on the problem and the results of your three algorithms. The report should be submited on LEARN as a pdf. 
+    - Describing each algorithm you used, define the states, actions, dynamics. Define the mathematical formulation of your algorithm, show the Bellman updates for you use.
+    - Some quantitative analysis of the results, a default plot for comparing all algorithms is given. You can do more than that.
+    - Some qualitative analysis of why one algorithm works well in each case, what you noticed along the way.
 
 
 ### Evaluation
