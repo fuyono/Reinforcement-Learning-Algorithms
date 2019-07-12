@@ -20,12 +20,17 @@ Their are three tasks defined in `run_main.py` which can be commented out to try
 This assignment will have a written component and a programming component.
 Clone the mazeworld environment locally and run the code looking at the implemtation of the sample algorithm.
 Your task is to implemnt three other algortihms on this domain.
-- SARSA
-- QLearning
-- At least one other algorithm of your choice or own design. Some ones to consider trying include Policy Iteration, Double Q-Learning, TD(Lambda) with eligibility traces, Policy Gradients.
-
-### Report
-Write a short report on the problem and the results of your three algorithms. This should include some plots as well as the mathematical formulations of each of your solutions. The report should be submited on LEARN as a pdf. 
+- **(20%)** Implement SARSA
+- **(20%)** Implement QLearning
+- **(20%)** At least one other algorithm of your choice or own design. 
+Suggestions to try:
+    - Policy Iteration (easy)
+    - Expected SARSA (less easy)
+    - Double Q-Learning (less easy)
+    - n-step TD or TD(Lambda) with eligibility traces (harder)
+    - Policy Gradients (harderer)
+- **(10%) bonus** Implement four algorithms in total (you can do more but we'll only look at four, you need to tell us which).
+- **(40%)** Report : Write a short report on the problem and the results of your three algorithms. This should include some plots as well as the mathematical formulations of each of your solutions. The report should be submited on LEARN as a pdf. 
 
 
 ### Evaluation
