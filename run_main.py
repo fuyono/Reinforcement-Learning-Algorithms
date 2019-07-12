@@ -86,7 +86,7 @@ if __name__ == "__main__":
 
     #Example Short Fast for Debugging
     showRender=True
-    episodes=3
+    episodes=30
     renderEveryNth=10000
     printEveryNth=1
     do_plot_rewards=True
@@ -130,12 +130,12 @@ if __name__ == "__main__":
     experiments = [(env1,RL1, data1)]
 
     #Create another RL_brain_ALGNAME.py class and import it as rlag2 then run it here.
-    env2 = Maze(agentXY,goalXY,wall_shape,pits)
-    RL2 = rlalg2(actions=list(range(env2.n_actions)))
-    data2={}
-    env2.after(10, update(env2, RL2, data2, episodes))
-    env2.mainloop()
-    experiments.append((env2,RL2, data2))
+    #env2 = Maze(agentXY,goalXY,wall_shape,pits)
+    #RL2 = rlalg2(actions=list(range(env2.n_actions)))
+    #data2={}
+    #env2.after(10, update(env2, RL2, data2, episodes))
+    #env2.mainloop()
+    #experiments.append((env2,RL2, data2))
 
 
     print("All experiments complete")

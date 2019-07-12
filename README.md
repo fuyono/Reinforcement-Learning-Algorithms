@@ -1,8 +1,9 @@
 # Maze World - Assignment 2
 Assignment code for course ECE 493 T25 at the University of Waterloo in Spring 2019.
-Code designed and created by Sriram Ganapathi Subramanian and Mark Crowley, 2019.
+(*Code designed and created by Sriram Ganapathi Subramanian and Mark Crowley, 2019*)
 
 **Due Date:** July 30 11:59pm submitted as PDF and code to LEARN dropbox.
+
 **Collaboration:** You can discuss solutions and help to work out the code. But each person *must do their own work*. All code and writing will be cross-checked against each other and against internet databases for cheating. 
 
 Updates to code which will be useful for all or bugs in the provided code will be updated on gitlab and announced.
