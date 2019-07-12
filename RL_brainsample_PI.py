@@ -1,4 +1,3 @@
-
 import numpy as np
 import pandas as pd
 
@@ -28,11 +27,10 @@ class rlalgorithm:
 
 
     '''Update the Q(S,A) state-action value table using the latest experience
-       This is kind of the learning update for Policy Iteration, but not completely
+       This is a not a very good learning update 
     '''
     def learn(self, s, a, r, s_):
         self.check_state_exist(s_)
-        q_predict = self.q_table.loc[s, a]
         if s_ != 'terminal':
             a_ = self.choose_action(str(s_))
             q_target = r + self.gamma * self.q_table.loc[s_, a_] 

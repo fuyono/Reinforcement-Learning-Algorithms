@@ -33,18 +33,6 @@ def plot_rewards(experiments):
 #    plt.axis([0, 1100, 0, 1100000])
     plt.show()
 
-'''not fully tested'''
-def saveData(env, RL, data):
-    timestr = time.strftime("%Y%m%d_%H%M%S")
-    filename='data/{}_{}x{}_{}.dat'.format(RL.display_name, env.MAZE_H, env.MAZE_W,timestr)
-    f = open(filename,'w')
-    pickle.dump((RL,data), f)
-    close(f)
-
-'''not fully tested'''
-def loadData(self, filename):
-    pickle.load(open('data/'+filename,'r'))
-
 def update(env, RL, data, episodes=50):
     global_reward = np.zeros(episodes)
     data['global_reward']=global_reward
@@ -52,7 +40,6 @@ def update(env, RL, data, episodes=50):
     for episode in range(episodes):  
         t=0
         # initial state
-        #TODO change state to state everywhere
         if episode == 0:
             state = env.reset(value = 0)
         else:
