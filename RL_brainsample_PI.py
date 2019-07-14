@@ -3,7 +3,8 @@ import pandas as pd
 
 
 class rlalgorithm:
-    def __init__(self, actions, learning_rate=0.01, reward_decay=0.9, e_greedy=0.9):
+
+    def __init__(self, actions, learning_rate=0.01, reward_decay=0.9, e_greedy=0.1):
         self.actions = actions  
         self.lr = learning_rate
         self.gamma = reward_decay
@@ -15,7 +16,8 @@ class rlalgorithm:
     def choose_action(self, observation):
         self.check_state_exist(observation)
  
-        if np.random.uniform() < self.epsilon:
+        #BUG: Epsilon should be .1 and signify the small probability of NOT choosing max action
+        if np.random.uniform() >= self.epsilon:
            
             state_action = self.q_table.loc[observation, :]
            
