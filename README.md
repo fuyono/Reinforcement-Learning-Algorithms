@@ -12,17 +12,15 @@ Updates to code which will be useful for all or bugs in the provided code will b
 The domain consists of a 10x10 grid of cells. The agent being controlled is represented as a red square. The goal is a yellow oval and you receive a reward of 1 for reaching it, this ends and resets the episode.
 Blue squares are **pits** which yield a penalty of -10 and end the episode. 
 Black squares are **walls** which cannot be passed through. If the agent tries to walk into a wall they will remain in their current position and receive a penalty of -.3.
-Their are three tasks defined in `run_main.py` which can be commented out to try each. They include a combination of pillars, rooms, pits and obstacles. The aim is to learn a policy that maximizes expected reward and reaches the goal as quickly as possible.
+Their are **three tasks** defined in `run_main.py` which can be commented out to try each. They include a combination of pillars, rooms, pits and obstacles. The aim is to learn a policy that maximizes expected reward and reaches the goal as quickly as possible.
 
-![Task 1](task1.png)
-![Task 2](task2.png)
-![Task 3](task3.png)
+# <img src="task1.png" width="300"/><img src="task2.png" width="300"/><img src="task3.png" width="300"/>
 
 ## Assignment Requirements
 
 This assignment will have a written component and a programming component.
 Clone the mazeworld environment locally and run the code looking at the implemtation of the sample algorithm.
-Your task is to implemnt three other algortihms on this domain.
+Your task is to implement three other algortihms on this domain.
 - **(20%)** Implement SARSA
 - **(20%)** Implement QLearning
 - **(20%)** At least one other algorithm of your choice or own design. 
@@ -51,6 +49,6 @@ So make sure your code runs with the given unmodified `run_main` and `maze_end` 
 ### Code Suggestions
 - When the number of episodes ends a plot is displayed of the algorithm performance. If multiple algorithms are run at once then they will be all plotted together for comparison. You may modify the plotting code and add any other analysis you need, this is only a starting point.
 - there are a number of parameters defined in `run_main` that can be used to speed up the simulations. Once you have debugged an algorithm and see it is running you can alter the `sim_speed`, `\*EveryNth` variables to alter the speed of each step and how often data is printed or updated visually to speed up training. 
-- For the default algorithms we have implemnted on these domains it seems to take at least 1500 episodes to converge, so don't read too much into how it looks after a few hundred.
-![Plot](plot.png)
-![Plot zoomed](plotzoom.png)
+- For the default algorithms we have implmented on these domains it seems to take at least 1500 episodes to converge, so don't read too much into how it looks after a few hundred.
+
+<img src="plot.png" width="400"/><img src="plotzoom.png" width="400"/>
