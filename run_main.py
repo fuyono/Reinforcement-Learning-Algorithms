@@ -115,16 +115,16 @@ if __name__ == "__main__":
     goalXY=[4,4]
 
     #Task 1
-    # wall_shape=np.array([[7,7],[4,6]])
-    # pits=np.array([[6,3],[2,6]])
+    wall_shape=np.array([[7,7],[4,6]])
+    pits=np.array([[6,3],[2,6]])
 
     #Task 2
     #wall_shape=np.array([[5,2],[4,2],[3,2],[3,3],[3,4],[3,5],[3,6],[4,6],[5,6]])
     #pits=[]
 
     #Task 3
-    wall_shape=np.array([[7,4],[7,3],[6,3],[6,2],[5,2],[4,2],[3,2],[3,3],[3,4],[3,5],[3,6],[4,6],[5,6]])
-    pits=np.array([[1,3],[0,5], [7,7]])
+    #wall_shape=np.array([[7,4],[7,3],[6,3],[6,2],[5,2],[4,2],[3,2],[3,3],[3,4],[3,5],[3,6],[4,6],[5,6]])
+    #pits=np.array([[1,3],[0,5], [7,7]])
 
     env1 = Maze(agentXY,goalXY,wall_shape, pits)
     RL1 = rlalg_sarsa(actions=list(range(env1.n_actions)))
