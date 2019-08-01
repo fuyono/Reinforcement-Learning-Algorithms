@@ -1,5 +1,9 @@
 from maze_env import Maze
 from RL_brainsample_PI import rlalgorithm as rlalg1
+from RL_brain_SARSA import rlalgorithm as rlalg_sarsa
+from RL_brain_QLearning import rlalgorithm as rlalg_qlearning
+from RL_brain_Double_QLearning import rlalgorithm as rlalg_double_qlearning
+from Rl_brain_Expected_SARSA import rlalgorithm as rlalg_expected_sarsa
 import numpy as np
 import sys
 import matplotlib.pyplot as plt
@@ -85,18 +89,18 @@ if __name__ == "__main__":
     sim_speed = 0.05
 
     #Example Short Fast for Debugging
-    showRender=True
-    episodes=30
-    renderEveryNth=5
-    printEveryNth=1
-    do_plot_rewards=True
+    # showRender=True
+    # episodes=30
+    # renderEveryNth=5
+    # printEveryNth=1
+    # do_plot_rewards=True
 
     #Exmaple Full Run, you may need to run longer
-    #showRender=False
-    #episodes=2000
-    #renderEveryNth=10000
-    #printEveryNth=100
-    #do_plot_rewards=True
+    showRender=False
+    episodes=2000
+    renderEveryNth=10000
+    printEveryNth=100
+    do_plot_rewards=True
 
     if(len(sys.argv)>1):
         episodes = int(sys.argv[1])
@@ -111,31 +115,45 @@ if __name__ == "__main__":
     goalXY=[4,4]
 
     #Task 1
-    wall_shape=np.array([[7,7],[4,6]])
-    pits=np.array([[6,3],[2,6]])
+    # wall_shape=np.array([[7,7],[4,6]])
+    # pits=np.array([[6,3],[2,6]])
 
     #Task 2
     #wall_shape=np.array([[5,2],[4,2],[3,2],[3,3],[3,4],[3,5],[3,6],[4,6],[5,6]])
     #pits=[]
 
     #Task 3
-    #wall_shape=np.array([[7,4],[7,3],[6,3],[6,2],[5,2],[4,2],[3,2],[3,3],[3,4],[3,5],[3,6],[4,6],[5,6]])
-    #pits=np.array([[1,3],[0,5], [7,7]])
+    wall_shape=np.array([[7,4],[7,3],[6,3],[6,2],[5,2],[4,2],[3,2],[3,3],[3,4],[3,5],[3,6],[4,6],[5,6]])
+    pits=np.array([[1,3],[0,5], [7,7]])
 
     env1 = Maze(agentXY,goalXY,wall_shape, pits)
-    RL1 = rlalg1(actions=list(range(env1.n_actions)))
+    RL1 = rlalg_sarsa(actions=list(range(env1.n_actions)))
     data1={}
     env1.after(10, update(env1, RL1, data1, episodes))
     env1.mainloop()
     experiments = [(env1,RL1, data1)]
 
     #Create another RL_brain_ALGNAME.py class and import it as rlag2 then run it here.
-    #env2 = Maze(agentXY,goalXY,wall_shape,pits)
-    #RL2 = rlalg2(actions=list(range(env2.n_actions)))
-    #data2={}
-    #env2.after(10, update(env2, RL2, data2, episodes))
-    #env2.mainloop()
-    #experiments.append((env2,RL2, data2))
+    env2 = Maze(agentXY,goalXY,wall_shape,pits)
+    RL2 = rlalg_qlearning(actions=list(range(env2.n_actions)))
+    data2={}
+    env2.after(10, update(env2, RL2, data2, episodes))
+    env2.mainloop()
+    experiments.append((env2,RL2, data2))
+
+    env3 = Maze(agentXY,goalXY,wall_shape,pits)
+    RL3 = rlalg_double_qlearning(actions=list(range(env3.n_actions)))
+    data3={}
+    env3.after(10, update(env3, RL3, data3, episodes))
+    env3.mainloop()
+    experiments.append((env3,RL3, data3))
+
+    env4 = Maze(agentXY,goalXY,wall_shape,pits)
+    RL4 = rlalg_expected_sarsa(actions=list(range(env4.n_actions)))
+    data4={}
+    env4.after(10, update(env4, RL4, data4, episodes))
+    env4.mainloop()
+    experiments.append((env4,RL4, data4))
 
 
     print("All experiments complete")
